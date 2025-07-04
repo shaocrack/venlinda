@@ -156,11 +156,38 @@ startBtn.addEventListener('click', () => {
                     poema.style.fontWeight = 'normal';
                     poema.style.fontSize = '1.5rem';
                     poema.style.whiteSpace = 'pre-line';
-                    poema.innerHTML = `En la noche, tu luz es la más brillante,\nMás que mil estrellas en el cielo distante.\nTu sonrisa eclipsa la luna y su reflejo,\nY tu belleza hace al universo pequeño.`;
+                    poema.innerHTML = `En la noche, tu luz es la más brillante,\nMás que mil estrellas en el cielo distante.\nTu sonrisa eclipsa la luna y su reflejo,\nY tu belleza hace al universo pequeño.\n\nPero también, entre líneas y código,\nse esconde un arte, un mundo lógico.\nTus ojos, como variables en constante cambio,\nresuelven mi algoritmo cuando te hallo.\n\nEres mi función favorita, mi clase especial,\nmi bucle infinito, mi error sintáctico ideal.\nY si el cielo es un canvas de bits y de sueños,\ntu belleza es el código que lo hace perfecto.`;
                     mensajeDiv.appendChild(poema);
+
+                    // Mostrar firma al centro después de 4 segundos
+                    setTimeout(() => {
+                        // Primero mostrar "Ten una bonita noche bonita :D"
+                        const mensajeFinal = document.createElement('div');
+                        mensajeFinal.className = 'mensaje-line';
+                        mensajeFinal.style.marginTop = '60px';
+                        mensajeFinal.style.fontWeight = 'bold';
+                        mensajeFinal.style.fontSize = '2.2rem';
+                        mensajeFinal.style.color = '#ffd700';
+                        mensajeFinal.style.textAlign = 'center';
+                        mensajeFinal.textContent = 'Ten una bonita noche bonita :D';
+                        mensajeDiv.innerHTML = '';
+                        mensajeDiv.appendChild(mensajeFinal);
+                        // Luego de 2.5 segundos mostrar "by #Shaopro"
+                        setTimeout(() => {
+                            const firma = document.createElement('div');
+                            firma.className = 'mensaje-line';
+                            firma.style.marginTop = '30px';
+                            firma.style.fontWeight = 'bold';
+                            firma.style.fontSize = '2.1rem';
+                            firma.style.color = '#ffd700';
+                            firma.style.textAlign = 'center';
+                            firma.textContent = 'by #Shaopro';
+                            mensajeDiv.appendChild(firma);
+                        }, 2500);
+                    }, 21000);
                 }, 3000);
-            }, 5000);
-        }, 1800);
+            }, 2000);
+        }, 1600);
     });
 });
 // --- Fin lógica del botón y mensaje ---
