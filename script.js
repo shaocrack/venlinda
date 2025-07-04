@@ -156,7 +156,7 @@ startBtn.addEventListener('click', () => {
                     poema.style.fontWeight = 'normal';
                     poema.style.fontSize = '1.5rem';
                     poema.style.whiteSpace = 'pre-line';
-                    poema.innerHTML = `En la noche, tu luz es la más brillante,\nMás que mil estrellas en el cielo distante.\nTu sonrisa eclipsa la luna y su reflejo,\nY tu belleza hace al universo pequeño.\n\nPero también, entre líneas y código,\nse esconde un arte, un mundo lógico.\nTus ojos, como variables en constante cambio,\nresuelven mi algoritmo cuando te hallo.\n\nEres mi función favorita, mi clase especial,\nmi bucle infinito, mi error sintáctico ideal.\nY si el cielo es un canvas de bits y de sueños,\ntu belleza es el código que lo hace perfecto.`;
+                    poema.innerHTML = `En la noche, tu luz es la más brillante,\nMás que mil estrellas en el cielo distante.\nTu sonrisa eclipsa la luna y su reflejo,\nY tu belleza hace al universo pequeño.\n\nPero también, entre líneas y código,\nse esconde un arte, un mundo lógico.\nTus ojos, como variables en constante cambio,\nresuelven mi algoritmo cuando te hallo.\n\n espera...`;
                     mensajeDiv.appendChild(poema);
 
                     // Mostrar firma al centro después de 4 segundos
