@@ -169,7 +169,7 @@ startBtn.addEventListener('click', () => {
                         mensajeFinal.style.fontSize = '2.2rem';
                         mensajeFinal.style.color = '#ffd700';
                         mensajeFinal.style.textAlign = 'center';
-                        mensajeFinal.textContent = 'Ten una bonita noche bonita :D';
+                        mensajeFinal.textContent = 'Ten una bonita noche, bonita :D';
                         mensajeDiv.innerHTML = '';
                         mensajeDiv.appendChild(mensajeFinal);
                         // Luego de 2.5 segundos mostrar "by #Shaopro"
