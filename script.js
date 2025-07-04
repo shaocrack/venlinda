@@ -106,9 +106,8 @@ const audio = document.getElementById('audio');
 const mensajeDiv = document.getElementById('mensaje');
 
 const mensaje = [
-    'POR SI NADIE TE LO DIJO',
-    'QUE TENGAS UNA BONITA NOCHE',
-    'NO TE VI, PERO SE QUE HOY ESTUVISTE HERMOSA :D'
+    'NO TE VI, PERO SE QUE HOY ESTUVISTE TAN BONITA :D',
+    'QUE LE DAS CELOS AL CIELO'
 ];
 
 function typeWriterMsg(lines, element, lineIndex = 0, charIndex = 0, doneCallback) {
@@ -132,12 +131,35 @@ function typeWriterMsg(lines, element, lineIndex = 0, charIndex = 0, doneCallbac
 
 startBtn.addEventListener('click', () => {
     startBtn.style.display = 'none';
+    audio.currentTime = 10;
     audio.play();
     mensajeDiv.innerHTML = '';
     typeWriterMsg(mensaje, mensajeDiv, 0, 0, () => {
         // Mostrar todo el mensaje junto al final
         setTimeout(() => {
             mensajeDiv.innerHTML = mensaje.map(l => `<div class='mensaje-line'>${l}</div>`).join('');
+            // Después de 5 segundos, mostrar el mensaje extra
+            setTimeout(() => {
+                const extra = document.createElement('div');
+                extra.className = 'mensaje-line';
+                extra.style.marginTop = '20px';
+                extra.style.fontWeight = 'bold';
+                extra.style.fontSize = '2.1rem';
+                extra.textContent = 'espera....';
+                mensajeDiv.appendChild(extra);
+
+                // Mostrar el poema después de 3 segundos
+                setTimeout(() => {
+                    const poema = document.createElement('div');
+                    poema.className = 'mensaje-line';
+                    poema.style.marginTop = '30px';
+                    poema.style.fontWeight = 'normal';
+                    poema.style.fontSize = '1.5rem';
+                    poema.style.whiteSpace = 'pre-line';
+                    poema.innerHTML = `En la noche, tu luz es la más brillante,\nMás que mil estrellas en el cielo distante.\nTu sonrisa eclipsa la luna y su reflejo,\nY tu belleza hace al universo pequeño.`;
+                    mensajeDiv.appendChild(poema);
+                }, 3000);
+            }, 5000);
         }, 1800);
     });
 });
